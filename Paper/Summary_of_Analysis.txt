@@ -3,7 +3,7 @@
 Project: Rolling Sales for Queens
 ---------------------------------
 Developed By:	Leticia Valadez
-		Gerard Garza
+		Gerardo Garza
 		Daniel Freeman
 		Sudip Bhattacharyya
 
