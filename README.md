@@ -4,9 +4,9 @@
 ---------------------------------
 Project: Rolling Sales for Queens
 ---------------------------------
-Developed By:	Leticia Valadez
-		Gerard Garza
-		Daniel Freeman
+Developed By:	Leticia Valadez / 
+		Gerard Garza / 
+		Daniel Freeman / 
 		Sudip Bhattacharyya
 
 Updated: February 28, 2017
