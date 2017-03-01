@@ -7,7 +7,6 @@
 
 library(plyr)
 
-setwd("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Data")
 
 qn <- read.csv("rollingsales_queens.csv",skip=4,header=TRUE)
 head(qn)
@@ -15,7 +14,7 @@ dim(qn)
 
 #export Summary and Data Structure to an external file in Analysis directory
 
-sink("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/RawDataSummary&Structure.txt")
+sink("Analysis/RawDataSummary&Structure.txt")
 print(summary(qn))
 print(str(qn))
 sink()
@@ -37,7 +36,7 @@ qn$year.built <- as.numeric(as.character(qn$year.built))
 
 ## Data exploration to ensure there's not anything absurd with sale prices
 
-jpeg("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/Chart1_HistogramforSalePrice.jpg")
+jpeg("Analysis/Chart1_HistogramforSalePrice.jpg")
 
 attach(qn)
 hist(sale.price.n)
@@ -47,7 +46,7 @@ graphics.off()
 
 ## Plotting actual sales
 
-jpeg("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/Chart2_PlotforGrossSQFTvsSalePrice.jpg")
+jpeg("Analysis/Chart2_PlotforGrossSQFTvsSalePrice.jpg")
 
 par(mfrow=c(2,1))
 qn.sale <- qn[qn$sale.price.n!=0,]
@@ -62,13 +61,13 @@ graphics.off()
 qn.homes <- qn.sale[which(grepl("FAMILY",qn.sale$building.class.category)),]
 dim(qn.homes)
 
-jpeg("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/Chart3_PlotforGrossSQFTvsSalePrice_forHomes.jpg")
+jpeg("Analysis/Chart3_PlotforGrossSQFTvsSalePrice_forHomes.jpg")
 
 plot(log10(qn.homes$gross.sqft),log10(qn.homes$sale.price.n))
 
 graphics.off()
 
-sink("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/SummaryforFamilyHomeswithSalePricebelow100000.txt")
+sink("Analysis/SummaryforFamilyHomeswithSalePricebelow100000.txt")
 print(summary(qn.homes[which(qn.homes$sale.price.n<100000),]))
 sink()
 
@@ -77,7 +76,7 @@ sink()
 qn.homes$outliers <- (log10(qn.homes$sale.price.n) <=5) + 0
 qn.homes <- qn.homes[which(qn.homes$outliers==0),]
 
-jpeg("C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Analysis/Chart4_SalePricePlot_CleandataforHomes.jpg")
+jpeg("Analysis/Chart4_SalePricePlot_CleandataforHomes.jpg")
 
 plot(log10(qn.homes$gross.sqft),log10(qn.homes$sale.price.n))
 
@@ -85,5 +84,5 @@ graphics.off()
 
 ## Exporting clean data from R to CSV file
 
-write.csv(qn.homes,"C:/Users/Sudip/Documents/SMU - MSDS/Coursework/Sem1/6306 - Doing Data Science/Unit 6/Exercises/Project_RollingSalesQueens/Data/CleanData_RollingSales_Queens.csv")
+write.csv(qn.homes,"Data/CleanData_RollingSales_Queens.csv")
 
