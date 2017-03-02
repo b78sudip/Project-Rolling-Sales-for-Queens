@@ -31,9 +31,9 @@ The root directory contains 3 sub-directories and 2 files:
 			-	Analysis (Directory):	This directory contains multiple output files and charts obtained in the process of analyzing our input dataset.
 			-	Paper (Directory):	This directory contains a file explaining data patterns identified in the input data.
 
-			-	Readme_RollingSalesQueens.txt (File):	This is a text file that has all the required details on this project. 
-									It guides users to identify all the file locations with a brief description on these files.
-			-	Codes.R (File):				This is an 'R' file that contains all the codes used in this project.
+			-	README.md(File):	This is a text file that has all the required details on this project. 
+							It guides users to identify all the file locations with a brief description on these files.
+			-	Codes.R (File):		This is an 'R' file that contains the code used in this project.
 
 
 Below are the brief descriptions on sub-directories:
