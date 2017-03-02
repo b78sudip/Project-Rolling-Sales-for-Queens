@@ -23,15 +23,13 @@ Analyze the relationship between property sale price and gross square footage fo
 Directories & File Locations:
 -----------------------------
 
-The entire project was developed under the root directory "Project_RollingSalesQueens".
+The entire project was developed under the root directory "Project-Rolling-Sales-for-Queens".
 
-The root directory contains 3 sub-directories and 2 files and the project developed in R-Studio:
+The root directory contains 3 sub-directories and 2 files:
 
 			-	Data (Directory): 	This directory contains data files
 			-	Analysis (Directory):	This directory contains multiple output files and charts obtained in the process of analyzing our input dataset.
 			-	Paper (Directory):	This directory contains a file explaining data patterns identified in the input data.
-
-			-	Project_RollingSalesQueens (Project):	This is the project developed to meet our objective with help of R-Studio.
 
 			-	Readme_RollingSalesQueens.txt (File):	This is a text file that has all the required details on this project. 
 									It guides users to identify all the file locations with a brief description on these files.
