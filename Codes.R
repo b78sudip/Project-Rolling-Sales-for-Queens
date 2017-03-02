@@ -8,7 +8,11 @@
 library(plyr)
 
 #All file locations are set on relative paths from the project directory.
-qn <- read.csv("rollingsales_queens.csv",skip=4,header=TRUE)
+#Before proceeding set your root directory first.
+#For example, setwd("C:/Rprojects/Project-Rolling-Sales-for-Queens")
+#You can verify directory with getwd()
+
+qn <- read.csv("data/rollingsales_queens.csv",skip=4,header=TRUE)
 head(qn)
 dim(qn)
 
