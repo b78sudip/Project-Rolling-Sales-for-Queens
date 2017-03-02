@@ -2,7 +2,7 @@
 # Taken from pages 49-50 of O'Neil and Schutt
 
 
-# Codes modeified by Sudip Bhattacharyya
+# Codes modified by Sudip Bhattacharyya
 
 
 library(plyr)
